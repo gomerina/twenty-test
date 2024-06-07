@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 100px 0 0 0;
+}
+
+
+.btn {
+    background-image: linear-gradient(#1c1c23, #1c1c23), linear-gradient(180deg, #0081b3, #0ff 47.16%, #6fef2d);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #fff;
+    border-radius: 40px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    color: #fff;
+    padding: 20px 60px;
+    text-align: center;
+    outline: none;
+    font-size: .875rem;
+    border: 2px solid transparent;
+}
+
+.vertical__item {
+    border: 1px solid black;
+    padding: 150px;
+    overflow: auto;
+}
+
+
+.wrapper {
+    height: 2000px;
+}
+
+.swiper-slide {
+    font-size: 32px;
+    line-height: normal;
+    background: pink;
+    color: #0081b3;
+}
+
+/*.wrapper svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+
+.kolobok {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: orange;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 200;
+    /*transition: .7s ease-in-out;
+    transform: rotate(-720deg);*/
+}
+
+.kolobok::before,
+.kolobok::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 35px;
+}
+
+.kolobok::before {
+    left: 26px;
+}
+
+.kolobok::after {
+    right: 26px;
+}
+
+.footer {
+    padding: 100px 0;
+    background: #fafafa;
+}
+
+.list-test {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 120px;
+    font-size: 20px;
+    padding: 100px 0;
+}
+
+.list-test ul {
+    margin: 0 0 30px 0;
+}
+
+.list-test li {
+    margin: 0 0 10px 0;
+}
