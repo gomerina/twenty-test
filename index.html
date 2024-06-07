@@ -265,31 +265,43 @@
 				console.log(scrolled)
 				$('.kolobok').attr('style', `transform: rotate(${scrolled * 7.2}deg)`);
 			})
+
+
+
+			if (window.innerWidth <= 1024) {
+				var touchMove = true;
+			}
 			var swiper = new Swiper(".mySwiper", {
 				slidesPerView: 4,
 				spaceBetween: 20,
 				direction: 'horizontal',
 				observer: true,
 				watchSlideProgress: true,
+				allowTouchMove: touchMove,
 				breakpoints: {
 					0: {
 						slidesPerView: 2,
+						allowTouchMove: true,
 					},
 					768: {
 						slidesPerView: 3,
+						allowTouchMove: true,
 					},
-					1024: {
+					1025: {
 						slidesPerView: 4,
+						allowTouchMove: false,
+
 					},
 				}
 			});
 			$(".jsTwenty").twentytwenty();
 
 
-			$('.twentytwenty-handle').on('mouseenter', function () {
+			$('.twentytwenty-handle').on('touchstart', function () {
 				swiper.allowTouchMove = false;
 			})
-			$('.twentytwenty-handle').on('mouseleave', function () {
+
+			$('.twentytwenty-handle').on('touchend', function () {
 				swiper.allowTouchMove = true;
 			})
 		})
